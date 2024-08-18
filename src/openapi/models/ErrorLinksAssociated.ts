@@ -14,7 +14,6 @@
  */
 
 import { ErrorLinksAssociatedOneOf, instanceOfErrorLinksAssociatedOneOf, ErrorLinksAssociatedOneOfFromJSON, ErrorLinksAssociatedOneOfFromJSONTyped, ErrorLinksAssociatedOneOfToJSON } from "./ErrorLinksAssociatedOneOf";
-import { string, instanceOfstring, stringFromJSON, stringFromJSONTyped, stringToJSON } from "./string";
 
 /**
  * @type ErrorLinksAssociated
@@ -31,7 +30,7 @@ export function ErrorLinksAssociatedFromJSONTyped(json: any, ignoreDiscriminator
     if (json === undefined || json === null) {
         return json;
     }
-    return { ...ErrorLinksAssociatedOneOfFromJSONTyped(json, true), ...stringFromJSONTyped(json, true) };
+    return { ...ErrorLinksAssociatedOneOfFromJSONTyped(json, true), err_str: JSON.stringify(json, true) };
 }
 
 export function ErrorLinksAssociatedToJSON(value?: ErrorLinksAssociated | null): any {
@@ -45,8 +44,8 @@ export function ErrorLinksAssociatedToJSON(value?: ErrorLinksAssociated | null):
     if (instanceOfErrorLinksAssociatedOneOf(value)) {
         return ErrorLinksAssociatedOneOfToJSON(value as ErrorLinksAssociatedOneOf);
     }
-    if (instanceOfstring(value)) {
-        return stringToJSON(value as string);
+    if (typeof value == "string") {
+        return JSON.parse(value);
     }
 
     return {};
