@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "npx tsc",
+    "build": "tsc",
     "prepare": "npm run build"
   },
   "devDependencies": {
