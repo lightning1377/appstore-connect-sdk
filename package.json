@@ -24,7 +24,7 @@
     "dotenv": "^16.0.3",
     "jest": "^29.4.2",
     "ts-jest": "^29.0.5",
-    "typescript": "^5.0.0"
+    "typescript": "^5.5.4"
   },
   "author": "isaced",
   "license": "MIT",
