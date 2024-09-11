@@ -13,8 +13,7 @@
     "dist"
   ],
   "dependencies": {
-    "jose": "^4.15.9",
-    "typescript": "^5.5.4"
+    "jose": "^4.15.9"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.5.2",
@@ -22,9 +21,11 @@
     "@types/node-fetch": "^2.0.0",
     "dotenv": "^16.0.3",
     "jest": "^29.4.2",
-    "ts-jest": "^29.0.5"
+    "ts-jest": "^29.0.5",
+    "typescript": "^5.5.4"
   },
   "scripts": {
+    "preinstall": "npm install --include=dev",
     "test": "jest",
     "build": "tsc",
     "prepare": "npm run build"
