@@ -12,10 +12,9 @@
   "files": [
     "dist"
   ],
-  "scripts": {
-    "test": "jest",
-    "build": "tsc",
-    "prepare": "npm run build"
+  "dependencies": {
+    "jose": "^4.15.9",
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.5.2",
@@ -23,8 +22,12 @@
     "@types/node-fetch": "^2.0.0",
     "dotenv": "^16.0.3",
     "jest": "^29.4.2",
-    "ts-jest": "^29.0.5",
-    "typescript": "^5.5.4"
+    "ts-jest": "^29.0.5"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "author": "isaced",
   "license": "MIT",
@@ -36,8 +39,5 @@
     "url": "https://github.com/isaced/appstore-connect-sdk/issues",
     "email": "isaced@163.com"
   },
-  "homepage": "https://github.com/isaced/appstore-connect-sdk",
-  "dependencies": {
-    "jose": "^4.15.9"
-  }
+  "homepage": "https://github.com/isaced/appstore-connect-sdk"
 }
